@@ -1,0 +1,91 @@
+/* Matrix styling */
+.matrix-container {
+    position: relative;
+    padding: 0 10px;
+    @media (min-width: 768px) {
+        padding: 0 20px;
+    }
+}
+
+.matrix-border {
+    position: relative;
+}
+
+.matrix-border::before,
+.matrix-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+
+.matrix-border::before {
+    left: -8px;
+}
+
+.matrix-border::after {
+    right: -8px;
+}
+
+/* Input styling */
+.matrix-input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    &:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    }
+    &:hover {
+        border-color: #6b7280;
+    }
+}
+
+/* Matrix display styling */
+.matrix-display {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Step display styling */
+.step-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Add dark mode support */
+@media (prefers-color-scheme: dark) {
+    .matrix-border::before,
+    .matrix-border::after {
+        background-color: white;
+    }
+    
+    .matrix-input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: white;
+    }
+}
