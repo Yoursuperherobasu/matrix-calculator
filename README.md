@@ -1,6 +1,6 @@
 # Matrix Calculator
 
-A React-based matrix calculator that performs various matrix operations with a clean, user-friendly interface.
+A React-based matrix calculator that performs various matrix operations with a clean, user-friendly interface. Helps in calculating Eigenvalues of 3x3 matrix and also shows the solution steps to derive the answer.
 
 ## Features
 
